@@ -19,7 +19,7 @@ jobs:
       - name: Install SDK and NDK
         run: sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0" "ndk;27.2.12479018"
       - name: Build APK
-        run: ./gradlew :TMessagesProj:assembleAfatDebug --no-daemon
+        run: ./gradlew :TMessagesProj:tasks --all --no-daemon
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
